@@ -30,21 +30,20 @@ Class DefiManager {
         $this-> bd = new PDO("mysql:host=localhost;dbname=escape_game", 'root', '');
     }
 
-    public function defi1($tentative) {
-        $sql = "select login, code from defi1";
-        //  where login='$tentative'";
+    public function defi1($login, $mdp) {
+        $sql = "select login, mdp, code from defi1 where login='$login' and mdp='$mdp'";
         $requete = $this -> bd -> prepare($sql);
         $requete -> execute();
         $message = $requete -> fetchAll();
-        foreach ($message as $value) {
-            if ($tentative == 'admin";--' || $tentative == "admin';--" || $tentative == 'admin"; --' || $tentative == "admin'; --") {
-                echo "<p>".$value['code']."</p>";
-                return true;
-            } else if ($value['login'] != $tentative) {
-                return false;
-                // echo "Identifiant et/ou mot de passe erroné(s) !";
-            }
+        // print_r($message);
+        // var_dump($message);
+        if ($message[0]['login'] == $login && $message[0]['mdp'] == $mdp) {
+            return $message[0]['code'];
         }
+    }
+
+    public function defi2($tentative) {
+        
     }
 }
 
