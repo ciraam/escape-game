@@ -12,8 +12,9 @@
 $utilisateur = new DefiManager();
 $log = new LogManager();
 
-if (isset($_POST['identifiant'])) {
-    if ($utilisateur -> defi1($_POST['identifiant'])) {
+if (isset($_POST['identifiant']) && isset($_POST['mdp'])) {
+    if ($utilisateur -> defi1($_POST['identifiant'], $_POST['mdp']) == true) {
+        echo "<p>S15M11</p>";
         echo "<p>Insérer le dans l'URL !</p>";
     } else {
         echo "Identifiant et/ou mot de passe erroné(s) !";
