@@ -19,13 +19,14 @@ if(isset($_GET['code'])){
         require_once("view/header.php");
         require_once("view/viewDefi2.php");
     }
-    // if ($_GET["code"] == ""){
-    //     $title = "Défi 3";
-    //     require_once("view/defi3.php");
-    // }
+    if ($_GET["code"] == "J03M10"){
+        $title = "Défi 3";
+        require_once("view/header.php");
+        require_once("view/viewDefi3.php");
+    }
     // if ($_GET["code"] == ""){
     //     $title = "Défi 4";
-    //     require_once("view/defi4.php");
+    //     require_once("view/viewDefi4.php");
     // }
 }
 else {

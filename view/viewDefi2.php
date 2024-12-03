@@ -1,16 +1,40 @@
+<?php
 
-    <div class="container">
-        <h2>Espace commentaire</h2>
-        <form method="post">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" placeholder="Entrez votre nom">
-            
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" placeholder="Entrez votre email">
-            
-            <label for="comment">Commentaire :</label>
-            <textarea id="comment" name="comment" rows="5" placeholder="Écrivez votre commentaire ici..." required></textarea>
-            
-            <button type="submit">Soumettre</button>
-        </form>
-    </div>
+$admin = new DefiManager();
+$commentaires = $admin -> showCommentDefi2();
+
+echo "<div class='container'> <div class='box'> <h2>Commentaires</h2>";
+foreach ($commentaires as $commentaire) {
+    echo "<p><strong>" . $commentaire['pseudo'] . " </strong> | (" . $commentaire['mail'] . ") : " . $commentaire['commentaire'] . " | " . $commentaire['date'] . "</p>";
+}
+
+echo "</div>";
+
+?>
+
+<div class="box">
+    <h2>Espace commentaire</h2>
+    <form method="post">
+        <label for="pseudo">Pseudo :</label>
+        <input type="text" id="pseudo" name="pseudo" placeholder="Entrez votre pseudo" required>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+        <label for="comment">Commentaire :</label>
+        <textarea id="comment" name="comment" rows="5" placeholder="Écrivez votre commentaire ici..." required></textarea>
+        <button type="submit">Soumettre</button>
+    </form>
+</div>
+</div>
+<?php
+
+$utilisateur = new DefiManager();
+
+if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['comment'])) {
+    if ($utilisateur -> defi2($_POST['pseudo'], $_POST['email'], $_POST['comment']) == true) {
+        header("Refresh:0");
+        echo "<script> alert('Bien joué ! Voici le code : J03M10'); </script>";
+        echo "<p>Code : J03M10, à insérer dans l'URL !</p>";
+    }
+}
+
+?>
