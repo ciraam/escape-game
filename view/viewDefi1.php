@@ -1,5 +1,5 @@
-<div class="container">
-    <form  method="post">
+<div class="box">
+    <form method="post">
         <h2>Connexion administrateur</h2>  
         <label for="identifiant">Nom d'utilisateur :</label> 
         <input type="text" id="identifiant" name="identifiant" required><br><br> 
@@ -20,7 +20,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mdp'])) {
         echo $utilisateur -> defi1($_POST['identifiant'], $_POST['mdp']);
         echo "<p>Insérer le dans l'URL !</p>";
     } else {
-        echo "Identifiant et/ou mot de passe erroné(s) !";
+        echo "<p>Identifiant et/ou mot de passe erroné(s) !</p>";
     }
     $log -> addLog("nouvelle tentative");
 }

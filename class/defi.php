@@ -35,25 +35,19 @@ Class DefiManager {
         $requete = $this -> bd -> prepare($sql);
         $requete -> execute();
         $message = $requete -> fetchAll();
-        // print_r($message);
-        // var_dump($message);
+
         if ($requete -> fetchAll()) {
             return $message[0]['code'];
         }
     }
 
     public function defi2($pseudo, $mail, $commentaire) {
-        $sql = "insert into defi2 (pseudo, mail, commentaire, date) values (:pseudo, :mail, :commentaire, now())";
+        $sql = "insert into defi2 (pseudo, mail, commentaire, date) values ('$pseudo', '$mail', '$commentaire', now())";
         $requete = $this -> bd -> prepare($sql);
-        $requete -> bindParam('pseudo', $pseudo, PDO::PARAM_STR);
-        $requete -> bindParam('mail', $mail, PDO::PARAM_STR);
-        $requete -> bindParam('commentaire', $commentaire, PDO::PARAM_STR);
         $requete -> execute();
 
         if (preg_match("/<script>/", $pseudo) || preg_match("/<script>/", $mail) || preg_match("/<script>/", $commentaire)) {
             return true;
-            // echo "<script>alert('Bien joué ! Voici le code : J03M10, à insérer dans l\'URL)</script>";
-            // echo "<p>Code : J03M10, à insérer dans l'URL !</p>";
         }
     }
 
@@ -66,8 +60,35 @@ Class DefiManager {
         return $message;
     }
 
+    public function checkForm($attaque, $attaque2, $attaque3, $solution, $solution2, $solution3) {
+        $score = 0;
 
-    public function defi3($mdp) {
+        if ($attaque == 'sql') {
+            $score = $score + 1;
+        }
+        if ($solution == 1) {
+            $score = $score + 3;
+        } else if ($solution == 3) {
+            $score = $score + 1;
+        }
+        if ($attaque2 == 'xss') {
+            $score = $score + 1;
+        }
+        if ($solution2 == 2) {
+            $score = $score + 3;
+        } else if ($solution2 == 4) {
+            $score = $score + 1;
+        }
+        if ($attaque3 == 'session') {
+            $score = $score + 1;
+        }
+        if ($solution3 == 3) {
+            $score = $score + 3;
+        } else if ($solution3 == 5) {
+            $score = $score + 1;
+        }
+
+        return $score;
     }
 }
 

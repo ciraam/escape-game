@@ -13,8 +13,8 @@ echo "</div>";
 ?>
 
 <div class="box">
-    <h2>Espace commentaire</h2>
     <form method="post">
+    <h2>Espace commentaire</h2>
         <label for="pseudo">Pseudo :</label>
         <input type="text" id="pseudo" name="pseudo" placeholder="Entrez votre pseudo" required>
         <label for="email">Email :</label>
