@@ -13,4 +13,4 @@ if ($_GET['s'] <= 3) {
 echo "<p>Votre score : " . $_GET['s'] . "</p>";
 
 $user = new UtilisateurManager();
-$user -> score($_SESSION['id'], $_GET['s']);
+$user -> partie($_SESSION['id'], $_GET['s']);

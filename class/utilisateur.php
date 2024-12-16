@@ -75,15 +75,11 @@ Class Utilisateur {
             return $message[0][0];
         }
 
-        function score($id, $score) {
-            $sql = "update joueur set score = :score where id = :id";
+        function partie($id, $score) {
+            $sql = "insert into partie (id_joueur, date_partie, score) values (:id, now(), :score)";
             $requete = $this -> bd -> prepare($sql);
-            $requete -> bindParam('score', $score, PDO::PARAM_INT);
             $requete -> bindParam('id', $id, PDO::PARAM_INT);
+            $requete -> bindParam('score', $score, PDO::PARAM_INT);
             $requete -> execute();
-        }
-
-        function partie($idJoueur, $score) {
-
         }
 }
