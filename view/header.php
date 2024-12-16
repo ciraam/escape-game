@@ -6,5 +6,5 @@
 </head>
 <nav>
     <button onclick="window.location.href='?action=accueil'">Accueil</button>
-    <button onclick="window.location.href='?action=profil'">Profil (pas fini)</button>
+    <!-- <button onclick="window.location.href='?action=profil'">Profil (pas fini)</button> -->
 </nav>

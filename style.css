@@ -5,39 +5,89 @@ body {
 }
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
 }
-.box {
+.container2 {
+    gap : 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    
+}
+.fin {
+    background-image: url('img/ia-fin.gif');
+}
+/* .box {
     display: flex;
     /* flex-wrap: column; */
     /* flex: 1; */
-    max-width: 500px;
+    /* max-width: 500px;
     margin: auto 500px;
     padding: 50px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.box2 {
-    /* display: flex; */
-    flex-wrap: wrap;
-    flex-direction: row;
-    flex: 1;
-    max-width: 300px;
+} */
+.box {
+    /* flex: 1;
+    /* 
     margin: auto;
-    padding: 200px;
+    padding: 50px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    /* flex: 0 10 100px; */
+    /* margin: 0; Supprime les marges automatiques */
+    /* padding: 15px; /* Ajuste la marge intérieure */
+    /* max-width: 100px; */
+    /* background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    /* text-align: center; */
+    flex-direction: row;
+    flex: 0 0 100px;
+    max-width: 700px;
+    margin: 0;
+    padding: 15px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.boxImg {
-    flex-wrap: wrap;
-    flex-direction: row;
-    flex: 1;
-    max-width: 300px;
+.boxImg1 {
+    /* flex-direction: row; */
+    flex: 0 0 70px;
+    max-width: 700px;
     margin: auto;
-    padding: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.boxImg2 {
+    /* flex-direction: row; */
+    flex: 0 0 70px;
+    max-width: 900px;
+    margin: auto;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.boxImg3 {
+    /* flex-direction: row; */
+    flex: 0 0 70px;
+    max-width: 280px;
+    margin: auto;
+    padding: 15px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -55,7 +105,7 @@ label {
 input, textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: -15px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;

@@ -29,14 +29,7 @@ if(isset($_GET['code'])){
         require_once("view/header.php");
         require_once("view/viewDefi4.php");
     }
-}
-// else {
-//     $title = "Escape Game";
-//     require_once("view/header.php");
-//     require_once("view/accueil.php");
-// }
-
-if(isset($_GET['action'])){
+} elseif(isset($_GET['action'])){
     if ($_GET["action"] == "accueil"){
         $title = "Inscription";
         require_once("view/header.php");
@@ -57,12 +50,11 @@ if(isset($_GET['action'])){
         require_once("view/header.php");
         require_once("view/jeuFini.php");
     }
+} else {
+    $title = "Escape Game";
+    require_once("view/header.php");
+    require_once("view/accueil.php");
 }
-// else {
-//     $title = "Escape Game";
-//     require_once("view/header.php");
-//     require_once("view/accueil.php");
-// }
 
 require_once("view/footer.php");
 

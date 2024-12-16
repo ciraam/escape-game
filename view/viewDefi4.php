@@ -1,41 +1,42 @@
 <H3>ATTENTION ! Attaque ultime de l'IA en approche... Voici 3 attaques en même temps, réparez vite les failles !</H3>
-<!-- <div class="box"> -->
-<div class="boxImg">
-    <form method="post">
-    <h2>N°1</h2>
-        <img src="img/1defi4.png" alt="1Defi4">
-    </form>
+<div class="container">
+    <div class="boxImg1">
+        <form method="post">
+        <h2>N°1</h2>
+            <img src="img/1defi4.png" alt="1Defi4">
+        </form>
+    </div>
+    <div class="boxImg2">
+        <form method="post">
+        <h2>N°2</h2>
+            <img src="img/2defi4.png" alt="2Defi4">
+            <p>&</p>
+            <img src="img/2.5defi4.png" alt="2.5Defi4">  
+        </form>
+    </div>
+    <div class="boxImg3">
+        <form method="post">
+        <h2>N°3</h2>
+            <img src="img/3defi4.png" alt="3Defi4">
+        </form>
+    </div>
 </div>
-<div class="boxImg">
-    <form method="post">
-    <h2>N°2</h2>
-        <img src="img/2defi4.png" alt="2Defi4">
-        <p>&</p>
-        <img src="img/2.5defi4.png" alt="2.5Defi4">  
-    </form>
-</div>
-<div class="boxImg">
-    <form method="post">
-    <h2>N°3</h2>
-        <img src="img/3defi4.png" alt="3Defi4">
-    </form>
-</div>
-<!-- </div> -->
-<!-- <div class="box"> -->
-    <form method="post">
-    <h2>Correction des vulnérabilités</h2>
-        <div class="box2">
+<!-- <div class="container2"> -->
+</br>
+<u><h2 style="text-align: center">Correction des vulnérabilités</h2></u>
+</br>
+    <form class ="container2" method="post">
+        <div class="box">
         <h3><u>Attaque n°1 :</u></h3>
-        <label for="sql">Injection SQL</label>
             <input type="radio" id="sql" name="attaque" value="sql" />
-            
+            <label for="sql">Injection SQL</label>
             <input type="radio" id="session" name="attaque" value="session" />
             <label for="session">Manipulation de session</label>
             <input type="radio" id="csrf" name="attaque" value="csrf" />
             <label for="csrf">Attaques CSRF</label>
             <input type="radio" id="xss" name="attaque" value="xss" />
             <label for="xss">Attaques XSS</label>
-
+            </br>
             <label for="solution">Solution :</label>
             <select name="solution" id="solution">
                 <option value="">Liste choix, 2 réponses possibles mais l'une favorisée !</option>
@@ -49,7 +50,7 @@
             </select>
         </div>
 
-        <div class="box2">
+        <div class="box">
         <h3><u>Attaque n°2 :</u></h3>
             <input type="radio" id="sql" name="attaque2" value="sql" />
             <label for="sql">Injection SQL</label>
@@ -59,7 +60,7 @@
             <label for="xss">Attaques XSS</label>
             <input type="radio" id="session" name="attaque2" value="session" />
             <label for="session">Manipulation de session</label>
-
+            </br>
             <label for="solution2">Solution :</label>
             <select name="solution2" id="solution2">
                 <option value="">Liste choix, 2 réponses possibles mais l'une favorisée !</option>
@@ -73,7 +74,7 @@
             </select>
         </div>
 
-        <div class="box2">
+        <div class="box">
         <h3><u>Attaque n°3 :</u></h3>
             <input type="radio" id="csrf" name="attaque3" value="csrf" />
             <label for="csrf">Attaques CSRF</label>
@@ -83,7 +84,7 @@
             <label for="xss">Attaques XSS</label>
             <input type="radio" id="sql" name="attaque3" value="sql" />
             <label for="sql">Injection SQL</label>
-
+            </br>
             <label for="solution3">Solution :</label>
             <select name="solution3" id="solution3">
                 <option value="">Liste choix, 2 réponses possibles mais l'une favorisée !</option>
@@ -97,9 +98,8 @@
             </select>
         </div>
 
-        <br></br><button type="submit" name="bouton">Vérifier</button>
+        <button style="font-size: 27px; margin-top: 15px; margin-left: 65px" type="submit" name="bouton">Vérifier</button>
     </form>
-<!-- </div> -->
 <!-- </div> -->
 
 <?php

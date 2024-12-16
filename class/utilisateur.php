@@ -55,7 +55,7 @@ Class Utilisateur {
         }
 
         function inscription($pseudo, $mail) {
-            $sql = "insert into joueur (pseudo, mail, date_inscription, score) values (:pseudo, :mail, now(), null)";
+            $sql = "insert into joueur (pseudo, mail, date_inscription) values (:pseudo, :mail, now())";
             $requete = $this -> bd -> prepare($sql);
             $requete -> bindParam('pseudo', $pseudo, PDO::PARAM_STR);
             $requete -> bindParam('mail', $mail, PDO::PARAM_STR);
