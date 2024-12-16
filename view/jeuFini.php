@@ -1,4 +1,4 @@
-<div class="fin"></div>
+<strong>
 <?php
 
 if ($_GET['s'] <= 3) {
@@ -11,7 +11,11 @@ if ($_GET['s'] <= 3) {
     echo "<p>Bravo ! Vous avez vaincu l'IA (dé)générative !</p>";
 }
 
-echo "<p>Votre score : " . $_GET['s'] . "/12</p>";
+echo "<p><u>Votre score :</u> " . $_GET['s'] . "/12</p>";
 
 $user = new UtilisateurManager();
 $user -> partie($_SESSION['id'], $_GET['s']);
+
+?>
+</strong>
+<img style=" display : center" src="img/ia-fin.gif" alt="ia-fin" />

@@ -98,7 +98,7 @@
             </select>
         </div>
 
-        <button style="font-size: 27px; margin-top: 15px; margin-left: 65px" type="submit" name="bouton">Vérifier</button>
+        <button style="font-size: 27px; margin-top: 15px; margin-left: 65px; border-radius: 11px" type="submit" name="bouton">Vérifier</button>
     </form>
 <!-- </div> -->
 
