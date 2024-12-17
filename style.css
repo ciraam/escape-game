@@ -20,6 +20,32 @@ body {
 .fin {
     background-image: url('img/ia-fin.gif');
 }
+.container-com {
+    display: flex;
+    flex-wrap: row;
+}
+.commentaire {
+    flex: 1;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.profil {
+    flex: 1;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* justify-content: center; */
+    /* align-items: center; */
+}
 /* .box {
     display: flex;
     /* flex-wrap: column; */

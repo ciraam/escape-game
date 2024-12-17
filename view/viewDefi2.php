@@ -3,7 +3,7 @@
 $admin = new DefiManager();
 $commentaires = $admin -> showCommentDefi2();
 
-echo "<div class='container'> <div class='box'> <h2>Commentaires</h2>";
+echo "<div class='container-com'> <div class='commentaire'> <h2>Commentaires</h2>";
 foreach ($commentaires as $commentaire) {
     echo "<p><strong>" . $commentaire['pseudo'] . " </strong> | (" . $commentaire['mail'] . ") : " . $commentaire['commentaire'] . " | " . $commentaire['date'] . "</p>";
 }
@@ -12,15 +12,15 @@ echo "</div>";
 
 ?>
 
-<div class="box">
+<div class="commentaire">
     <form method="post">
     <h2>Espace commentaire</h2>
         <label for="pseudo">Pseudo :</label>
-        <input type="text" id="pseudo" name="pseudo" placeholder="Entrez votre pseudo" required>
+        <input type="text" id="pseudo" name="pseudo" placeholder="Entrez votre pseudo" required></br></br>
         <label for="email">Email :</label>
-        <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+        <input type="email" id="email" name="email" placeholder="Entrez votre email" required></br></br>
         <label for="comment">Commentaire :</label>
-        <textarea id="comment" name="comment" rows="5" placeholder="Écrivez votre commentaire ici..." required></textarea>
+        <textarea id="comment" name="comment" rows="5" placeholder="Écrivez votre commentaire ici..." required></textarea></br></br>
         <button type="submit">Soumettre</button>
     </form>
 </div>

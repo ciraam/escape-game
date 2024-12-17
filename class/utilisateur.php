@@ -82,4 +82,40 @@ Class Utilisateur {
             $requete -> bindParam('score', $score, PDO::PARAM_INT);
             $requete -> execute();
         }
+
+        function partiesRecentes() {
+            $sql = "select id_joueur, date_partie, score from partie order by date_partie desc limit 5";
+            $requete = $this -> bd -> prepare($sql);
+            $requete -> execute();
+            $message = $requete -> fetchAll();
+
+            return $message;
+        }
+
+        function utilisateursRecents() {
+            $sql = "select pseudo, date_inscription from joueur order by date_inscription desc limit 5";
+            $requete = $this -> bd -> prepare($sql);
+            $requete -> execute();
+            $message = $requete -> fetchAll();
+
+            return $message;
+        }
+
+        function getPseudo($id) {
+            $sql = "select pseudo from joueur where id=$id";
+            $requete = $this -> bd -> prepare($sql);
+            $requete -> execute();
+            $message = $requete -> fetchAll();
+
+            return $message;
+        }
+
+        function getProfile($id) {
+            $sql = "select pseudo, mail, date_inscription from joueur where id=$id";
+            $requete = $this -> bd -> prepare($sql);
+            $requete -> execute();
+            $message = $requete -> fetchAll();
+
+            return $message;
+        }
 }

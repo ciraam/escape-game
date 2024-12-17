@@ -1,8 +1,8 @@
 <form method="post">
     <h2>Inscription</h2>
     <p>Cette inscription est obligatoire si vous voulez faire le jeu, afin de permettre un suivi des scores</p>
-    <input type="text" name="pseudo"placeholder="Pseudo" required>
-    <input type="email" name="mail" placeholder="Adresse mail" required>
+    <input type="text" name="pseudo"placeholder="Pseudo" required></br></br>
+    <input type="email" name="mail" placeholder="Adresse mail" required></br></br>
     <button type="submit">S'inscrire</button>
 </form>
 

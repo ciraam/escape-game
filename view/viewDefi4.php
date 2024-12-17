@@ -21,7 +21,7 @@
         </form>
     </div>
 </div>
-<!-- <div class="container2"> -->
+
 </br>
 <u><h2 style="text-align: center">Correction des vulnérabilités</h2></u>
 </br>
@@ -100,23 +100,13 @@
 
         <button style="font-size: 27px; margin-top: 15px; margin-left: 65px; border-radius: 11px" type="submit" name="bouton">Vérifier</button>
     </form>
-<!-- </div> -->
 
 <?php
 
 $utilisateur = new DefiManager();
 $log = new LogManager();
 
-// if (isset($_POST['attaque']) && isset($_POST['attaque2']) && isset($_POST['attaque3']) && isset($_POST['solution']) && isset($_POST['solution2']) && isset($_POST['solution3'])) {
 if (isset($_POST['bouton'])) {
-    // if ($utilisateur -> checkForm($_POST['attaque'], $_POST['attaque2'], $_POST['attaque3'], $_POST['solution'], $_POST['solution2'], $_POST['solution3'])) {
-        // header("Location: index.php?action=jeuFini&s=" . $utilisateur -> checkForm($_POST['attaque'], $_POST['attaque2'], $_POST['attaque3'], $_POST['solution'], $_POST['solution2'], $_POST['solution3']) . "");
-        // exit(); 
-        // header("Location: jeuFini");
-        // $utilisateur -> checkForm($_POST['attaque'], $_POST['attaque2'], $_POST['attaque3'], $_POST['solution'], $_POST['solution2'], $_POST['solution3']);
-        $score = $utilisateur -> checkForm($_POST['attaque'], $_POST['attaque2'], $_POST['attaque3'], $_POST['solution'], $_POST['solution2'], $_POST['solution3']);
-        echo '<script>window.location.href="?action=jeuFini&s='.$score.'";</script>';
-        // &s=' . $utilisateur -> checkForm($_POST['attaque'], $_POST['attaque2'], $_POST['attaque3'], $_POST['solution'], $_POST['solution2'], $_POST['solution3']) . 
-        // exit();
-    // }
+    $score = $utilisateur -> checkForm($_POST['attaque'], $_POST['attaque2'], $_POST['attaque3'], $_POST['solution'], $_POST['solution2'], $_POST['solution3']);
+    echo '<script>window.location.href="?action=jeuFini&s='.$score.'";</script>';
 }
