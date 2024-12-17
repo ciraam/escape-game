@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 16 déc. 2024 à 10:53
+-- Généré le : mar. 17 déc. 2024 à 14:09
 -- Version du serveur : 8.3.0
 -- Version de PHP : 8.2.18
 
@@ -136,7 +136,15 @@ CREATE TABLE IF NOT EXISTS `partie` (
   `date_partie` date NOT NULL,
   `score` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `partie`
+--
+
+INSERT INTO `partie` (`id`, `id_joueur`, `date_partie`, `score`) VALUES
+(1, 1, '2024-12-16', 10),
+(2, 1, '2024-12-17', 7);
 
 -- --------------------------------------------------------
 
